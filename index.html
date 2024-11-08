@@ -4,26 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Primary Meta Tags -->
-<title>calendar</title>
-<meta name="title" content="calendar" />
-<meta name="description" content="A calendar is a system used for organizing and planning time" />
+    <!-- Primary Meta Tags -->
+    <title>calendar</title>
+    <meta name="title" content="calendar" />
+    <meta name="description" content="A calendar is a system used for organizing and planning time" />
 
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://calendar-omega-rust.vercel.app/" />
-<meta property="og:title" content="calendar" />
-<meta property="og:description" content="A calendar is a system used for organizing and planning time" />
-<meta property="og:image" content="/meta-tag.png" />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://calendar-omega-rust.vercel.app/" />
+    <meta property="og:title" content="calendar" />
+    <meta property="og:description" content="A calendar is a system used for organizing and planning time" />
+    <meta property="og:image" content="/meta-tag.png" />
 
-<!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content="https://calendar-omega-rust.vercel.app/" />
-<meta property="twitter:title" content="calendar" />
-<meta property="twitter:description" content="A calendar is a system used for organizing and planning time" />
-<meta property="twitter:image" content="/meta-tag.png" />
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://calendar-omega-rust.vercel.app/" />
+    <meta property="twitter:title" content="calendar" />
+    <meta property="twitter:description" content="A calendar is a system used for organizing and planning time" />
+    <meta property="twitter:image" content="/meta-tag.png" />
 
-<!-- Meta Tags Generated with https://metatags.io -->
+    <!-- Meta Tags Generated with https://metatags.io -->
     <style>
         body {
             display: flex;
@@ -106,24 +106,27 @@
 </head>
 
 <body>
-    <div class="calendar">
-        <div class="month-header">
-            <button id="prev-month">«</button>
-            <div class="month" id="month-year">Loading...</div>
-            <button id="next-month">»</button>
+    <section>
+        <div class="container">
+            <div class="calendar">
+                <div class="month-header">
+                    <button id="prev-month">«</button>
+                    <div class="month" id="month-year">Loading...</div>
+                    <button id="next-month">»</button>
+                </div>
+                <div class="days-of-week">
+                    <div>Sun</div>
+                    <div>Mon</div>
+                    <div>Tue</div>
+                    <div>Wed</div>
+                    <div>Thu</div>
+                    <div>Fri</div>
+                    <div>Sat</div>
+                </div>
+                <div class="dates" id="dates-container"></div>
+            </div>
         </div>
-        <div class="days-of-week">
-            <div>Sun</div>
-            <div>Mon</div>
-            <div>Tue</div>
-            <div>Wed</div>
-            <div>Thu</div>
-            <div>Fri</div>
-            <div>Sat</div>
-        </div>
-        <div class="dates" id="dates-container"></div>
-    </div>
-
+    </section>
     <script>
         const monthYearElement = document.getElementById('month-year');
         const datesContainer = document.getElementById('dates-container');
